@@ -408,8 +408,8 @@ address {
   fill: var(--title-color);
 }
 
-.socials-link:hover .icon,
-.socials-link:focus .icon {
+.social-link:hover .icon,
+.social-link:focus .icon {
   fill: var(--accent-color);
 }
 
