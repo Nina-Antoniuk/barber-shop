@@ -11,52 +11,64 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./css/fonts.css">
-  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/main.min.css">
 </head>
 <body>
-  <header class="page-header dark-bg">
+  <!-- <header class="page-header ">dark-bg  
     <div class="conteiner">
-      <nav class="navigation">
-        <a class="logo" href="./"><img width="69" height="56" src="./images/logo.svg" alt="logo"></a>
+      <a class="logo" href="./"><img width="69" height="56" src="./images/icons/logo.svg" alt="logo"></a>
 
-        <ul class="menu list">
-          <li class="menu-item"><a class="menu-link link" href="">О нас</a></li>
-          <li class="menu-item"><a class="menu-link link" href="">Услуги и цены</a></li>
-          <li class="menu-item"><a class="menu-link link" href="">Мастера</a></li>
-          <li class="menu-item"><a class="menu-link link" href="">Контакты</a></li>
-        </ul>
-      </nav>
+      <button class="menu-button" type="button">
+        <svg class="menu-button__icon">
+          <use href="./images/sprite.svg#icon-mobile-menu"></use>
+        </svg>
+      </button>
 
-      <a class="link" href="tel:+380441111111">+38 044 111 11 11</a>
-      <a class="btn link" href="#">Онлайн запись</a>
+      <div class="header-content">
+        <nav class="navigation">
+          <ul class="menu list">
+            <li class="menu__item"><a class="menu__link link" href="">О нас</a></li>
+            <li class="menu__item"><a class="menu__link link" href="">Услуги и цены</a></li>
+            <li class="menu__item"><a class="menu__link link" href="">Мастера</a></li>
+            <li class="menu__item"><a class="menu__link link" href="">Контакты</a></li>
+          </ul>
+        </nav>
+          
+        <ul class="contacts-list list">
+          <li><a class="link" href="tel:+380441111111">+38 044 111 11 11</a></li>
+          <li><a class="btn link" href="#">Онлайн запись</a></li>
+        </ul>    
+       </div>
     </div>
-  </header>
+  </header>-->
 
   <!-- hero section -->
-  <section class="hero dark-bg">
-   <div class="conteiner">
-      <div class="hero-content">
+  <section class="hero">
+   <div class="hero__conteiner dark-bg">
+      <div class="hero__content">
         <p class=" title-lable line">A hair salon for men in Kyiv</p>
-        <h1 class="hero-title title">BarberShop</h1>
+        <h1 class="hero__title title">BarberShop</h1>
         <p>Мы эксперты в модных мужских стрижках.
           Работаем быстро, осторожно и со вкусом.</p>
       </div>
 
 
-      <ul class="socials-list line list">
-        <li class="social-item"><a class="link" href="" target="blank" rel="noopener noreferrer">Instagram</a></li>
-        <li class="social-item"><a class="link" href="" target="blank" rel="noopener noreferrer">YouTube</a></li>
-      </ul>
+      <div class="hero__sitebar">
+        <ul class="socials-list line list">
+          <li class="socials-list__item"><a class="link" href="" target="blank" rel="noopener noreferrer">Instagram</a></li>
+          <li class="social-list__item"><a class="link" href="" target="blank" rel="noopener noreferrer">YouTube</a></li>
+        </ul>
+      </div>
    </div>
   </section>
 
   <!-- about section -->
-  <section class="about section">
+  <!-- <section class="about section">
     <div class="conteiner flexbox">
       <ul class="flexbox flexbox-item list">
         <li><img class="img" width="270" height="445" src="./images/about/img1.jpg" alt="Барбер за работой"></li><!--.flexbox-item??-->
-        <li><img class="img" width="270" height="445" src="./images/about/img2.jpg" alt="Стильная стрижка 2021"></li><!--.flexbox-item??-->
-      </ul>
+        <!-- <li><img class="img" width="270" height="445" src="./images/about/img2.jpg" alt="Стильная стрижка 2021"></li><!--.flexbox-item??-->
+      <!-- </ul>
 
       <div class="flexbox-item">
         <p class="title-lable line">О нас</p>
@@ -69,10 +81,10 @@
         <button class="btn" type="button">Онлайн запись</button>
       </div>
     </div>
-  </section>
+  </section>  -->
 
   <!-- services and prices -->
-  <section class="prices dark-bg  section" >
+  <!-- <section class="prices dark-bg  section" >
     <div class="conteiner">
       <p class="title-lable line">Проведи время в компании лучших мастеров</p>
       <h2 class="title section-title">Услуги и цены</h2>
@@ -92,10 +104,10 @@
       </div>
       <a class="btn link" href="">Oнлайн-запись</a>
     </div>
-  </section>
+  </section> -->
 
   <!-- Why choose us -->
-  <section class="benefits section">
+  <!-- <section class="benefits section">
     <div class="conteiner flexbox">
       <ul class="benefits-list list flexbox-item">
         <li class="benefits-item">
@@ -125,10 +137,10 @@
         <p>О нас говорят только хорошее. Но лучше 1 раз увидеть и прочувствовать, чем 10 раз прочитать.</p>
       </div>
     </div>
-  </section>
+  </section> -->
 
   <!-- our craftsmen section-->
-  <section class="craftsmen section" >
+  <!-- <section class="craftsmen section" >
     <div class="conteiner">
       <p class="title-lable line">для настоящих ценителей атмосферы</p>
       <h2 class="title section-title">Наши мастера</h2>
@@ -254,10 +266,10 @@
         </li>
       </ul>
     </div>
-  </section>
+  </section> -->
 
   <!-- portfolio  section -->
-  <section class="portfolio section">
+  <!-- <section class="portfolio section">
     <div class="conteiner">
       <p class="title-lable line">На латинском языке “барба” означает “борода”</p>
       <h2 class="visually-hidden">Портфолио</h2>
@@ -271,15 +283,15 @@
   </section>
 
   <div class="dark-bg">
-    <div class="conteiner flexbox">
+    <div class="conteiner flexbox"> -->
 
       <!-- form section -->
-      <section class="section flexbox-item">
+      <!-- <section class="section flexbox-item">
         <h2 class="title section-title">form</h2>
-      </section>
+      </section> -->
       
       <!-- address section -->
-      <section class="section flexbox-item">
+      <!-- <section class="section flexbox-item">
         <h2 class="title section-title">Контакты</h2>
         <address class="contacts-address">
           <ul class="contacts-list list">
@@ -330,7 +342,7 @@
         <li><a class="link" href="" target="blank" rel="noopener noreferrer">YouTube</a></li>
       </ul>
     </div>
-  </footer>
+  </footer> -->
 </body>
 </html>
 

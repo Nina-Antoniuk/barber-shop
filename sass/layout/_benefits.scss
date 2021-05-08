@@ -1,0 +1,19 @@
+.benefits-item {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  text-align: center;
+  color: var(--title-color);
+  background-color: var(--secondary-bg-color);
+}
+
+.benefits-number {
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 1.36;
+  letter-spacing: 0.05em;
+}
+
+.benefits-item sup {
+  color: var(--accent-color);
+}

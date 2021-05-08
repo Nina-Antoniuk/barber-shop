@@ -1,0 +1,30 @@
+.craftsmen {
+  background-color: var(--secondary-bg-color);
+}
+
+.craftsmen .section-title {
+  margin-bottom: 44px;
+}
+
+.craftsmen-list {
+  --bloks: 3;
+}
+
+.craftsmen-list-item {
+  font-size: 14px;
+  line-height: 19px;
+  text-align: center;
+  color: #ff6c00;
+}
+
+.craftsmen .img {
+  margin-bottom: 30px;
+}
+
+.craftsmen-member {
+  margin-bottom: 8px;
+  font-size: 18px;
+  line-height: 25px;
+
+  color: var(--title-color);
+}

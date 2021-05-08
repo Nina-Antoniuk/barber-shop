@@ -1,0 +1,76 @@
+@import "./utils/variables";
+@import "./base/common";
+@import "./base/conteiner";
+
+@import "./components/logo";
+@import "./components/menu-btn";
+@import "./components/menu";
+@import "./components/contacts";
+@import "./components/title-label";
+@import "./components/socials";
+
+@import "./layout/page-header";
+@import "./layout/hero";
+@import "./layout/aboout";
+@import "./layout/price";
+@import "./layout/benefits";
+@import "./layout/craftsman";
+
+.socials-icon + .socials-icon {
+  margin-left: 10px;
+}
+
+.social-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+.socials-icons .icon {
+  width: 20px;
+  height: 20px;
+  fill: var(--title-color);
+}
+
+.social-link:hover .icon,
+.social-link:focus .icon {
+  fill: var(--accent-color);
+}
+
+.portfolio .title-lable {
+  margin-bottom: 44px;
+}
+
+.works-list {
+  --bloks: 4;
+}
+
+.contacts-address {
+  margin-bottom: 70px;
+}
+
+.contacts-item:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.contacts-link {
+  display: flex;
+  align-items: center;
+}
+
+.contacts-link .icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 16px;
+  fill: none;
+  stroke: var(--dark-bg-text-color);
+}
+
+.contacts-link:hover .icon,
+.contacts-link:focus .icon {
+  stroke: var(--accent-color);
+}

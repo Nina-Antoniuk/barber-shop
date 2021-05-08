@@ -1,0 +1,16 @@
+.menu-button {
+  line-height: 0;
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+
+  &__icon {
+    width: 40px;
+    height: 40px;
+    fill: var(--light-text-color);
+  }
+}
