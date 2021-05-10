@@ -5,7 +5,7 @@ html {
 *,
 *::before,
 *::after {
-  box-sizing: inherit;
+  box-sizing: border-box;
 }
 
 body {
@@ -137,32 +137,4 @@ p {
 
 address {
   font-style: normal;
-}
-
-.socials-list {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 600;
-  font-size: 11px;
-  line-height: 1.36;
-  letter-spacing: 0.2em;
-  color: var(--title-color);
-}
-
-.social-item:not(:last-child) {
-  margin-right: 40px;
-}
-
-.socials-icons {
-  display: inline-flex;
-}
-
-.line::before {
-  content: "";
-  display: inline-block;
-  width: 60px;
-  height: 1px;
-  margin-right: 20px;
-  background-color: currentColor;
 }
