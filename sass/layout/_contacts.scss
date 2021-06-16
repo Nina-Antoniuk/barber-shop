@@ -4,29 +4,35 @@
   background-size: cover;
   background-image: url(../images/contacts/mobile/contacts-bg.png);
 
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url(../images/contacts/mobile/contacts-bg@2x.png);
+  }
+
   @media screen and (min-width: 768px) and (max-width: 1279.98px) {
     max-width: 768px;
     margin-right: auto;
     margin-left: auto;
     background-image: url(../images/contacts/tablet/img.png);
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../images/contacts/tablet/img@2x.png);
+    }
   }
 
   @media screen and (min-width: 1280px) {
-    flex-basis: 50%;
-    background-image: url(../images/contacts/desktop/contact-bg.png);
-  }
-}
-
-@media screen and (min-width: 768px) and (max-width: 1279.98px) {
-  .contacts .conteiner {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  .contacts__content-wrapper,
-  .contacts__office-hours {
     flex-basis: calc((100% - 30px) / 2);
+    padding-left: 100px;
+    background-image: url(../images/contacts/desktop/contact-bg.png);
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../images/contacts/desktop/contact-bg@2x.png);
+    }
   }
 }
 

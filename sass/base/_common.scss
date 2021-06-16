@@ -129,5 +129,12 @@ address {
 .combined-sections {
   @media screen and (min-width: 1280px) {
     display: flex;
+    justify-content: space-between;
   }
+}
+
+.section-conteiner {
+  max-width: 585px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
