@@ -1,0 +1,35 @@
+.contacts {
+  max-width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../images/contacts/mobile/contacts-bg.png);
+
+  @media screen and (min-width: 768px) and (max-width: 1279.98px) {
+    max-width: 768px;
+    margin-right: auto;
+    margin-left: auto;
+    background-image: url(../images/contacts/tablet/img.png);
+  }
+
+  @media screen and (min-width: 1280px) {
+    flex-basis: 50%;
+    background-image: url(../images/contacts/desktop/contact-bg.png);
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1279.98px) {
+  .contacts .conteiner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .contacts__content-wrapper,
+  .contacts__office-hours {
+    flex-basis: calc((100% - 30px) / 2);
+  }
+}
+
+.contacts__office-hours p {
+  margin-bottom: 0;
+}

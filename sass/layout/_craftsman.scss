@@ -1,13 +1,23 @@
 .craftsmen {
   background-color: var(--secondary-bg-color);
-}
 
-.craftsmen .section-title {
-  margin-bottom: 44px;
+  & .conteiner {
+    @media screen and (min-width: 768px) and (max-width: 1279.98px) {
+      max-width: 450px;
+    }
+  }
+
+  & .section-title {
+    margin-bottom: 44px;
+  }
 }
 
 .craftsmen-list {
   --bloks: 3;
+
+  @media screen and (min-width: 1280px) {
+    flex-wrap: nowrap;
+  }
 }
 
 .craftsmen-list-item {
@@ -15,6 +25,10 @@
   line-height: 19px;
   text-align: center;
   color: #ff6c00;
+
+  @media screen and (max-width: 1279.98px) {
+    margin-bottom: 64px;
+  }
 }
 
 .craftsmen .img {
@@ -25,6 +39,5 @@
   margin-bottom: 8px;
   font-size: 18px;
   line-height: 25px;
-
   color: var(--title-color);
 }

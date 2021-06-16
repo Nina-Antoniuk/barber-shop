@@ -1,20 +1,24 @@
 @import "./utils/variables";
+@import "./base/fonts";
 @import "./base/common";
 @import "./base/conteiner";
 
 @import "./components/logo";
 @import "./components/menu-btn";
 @import "./components/menu";
-@import "./components/contacts";
 @import "./components/title-label";
 @import "./components/socials";
 
+@import "./layout/section";
 @import "./layout/page-header";
 @import "./layout/hero";
-@import "./layout/aboout";
+@import "./layout/about";
 @import "./layout/price";
 @import "./layout/benefits";
 @import "./layout/craftsman";
+@import "./layout/contacts";
+@import "./layout/reserve";
+@import "./layout/page-footer";
 
 .socials-icon + .socials-icon {
   margin-left: 10px;

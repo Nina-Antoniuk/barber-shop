@@ -1,0 +1,27 @@
+.page-footer {
+  padding-top: 56px;
+  padding-bottom: 56px;
+
+  & .conteiner {
+    @media screen and (min-width: 768px) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  & p {
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 1.36;
+    color: var(--dark-bg-text-color);
+    margin-bottom: 0;
+  }
+}
+
+.page-footer__socials-list {
+  justify-content: flex-end;
+  @media screen and (min-width: 768px) {
+    order: 2;
+  }
+}

@@ -3,7 +3,6 @@
   top: 0;
   left: 0;
   z-index: 100;
-
   width: 100%;
   padding: 32px 0;
   font-weight: 600;
@@ -11,7 +10,6 @@
   line-height: 1.33;
   letter-spacing: 0.1em;
   color: #fff;
-  background-color: rgba(255, 75, 174, 0.521);
 
   & .conteiner {
     display: flex;
@@ -26,12 +24,23 @@
 
 .header-content {
   display: flex;
+  flex-grow: 1;
+  justify-content: space-between;
+  margin-left: 40px;
+
   @media screen and (max-width: 767.98px) {
     display: none;
   }
 }
 
-// .navigation + a {
-//   margin-left: auto;
-//   margin-right: 40px;
-// }
+.contacts-list {
+  display: flex;
+
+  &__item:not(:last-child) {
+    margin-right: 40px;
+  }
+}
+
+.contacts-btn {
+  color: var(--light-text-color);
+}

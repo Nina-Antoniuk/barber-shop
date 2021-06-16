@@ -1,19 +1,101 @@
-.benefits-item {
+.benefits {
+  & .conteiner {
+    @media screen and (min-width: 768px) {
+      display: flex;
+      flex-direction: column;
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      flex-direction: row;
+      justify-content: space-between;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }
+}
+
+.benefits__content {
+  & h2 + p {
+    @media screen and (max-width: 1199.98px) {
+      margin-bottom: 44px;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    order: 2;
+    flex-basis: calc((100% - 30px) / 2);
+  }
+}
+
+.benefits__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: -30px;
+  margin-left: -30px;
+
+  @media screen and (min-width: 768px) and (max-width: 1199.98px) {
+    justify-content: flex-end;
+  }
+
+  @media screen and (min-width: 1200px) {
+    order: 1;
+    flex-basis: calc((100% - 30px) / 2);
+    justify-content: center;
+  }
+}
+
+.benefits__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-basis: calc((100% - 30px * 2) / 2);
+  height: 133px;
+  margin-top: 30px;
+  margin-left: 30px;
   font-weight: 600;
   font-size: 11px;
   line-height: 1.36;
   text-align: center;
   color: var(--title-color);
   background-color: var(--secondary-bg-color);
+
+  @media screen and (min-width: 767.98px) {
+    flex-basis: calc((100% - 30px * 2) / 6 * 2);
+  }
+
+  & p {
+    margin-bottom: 0;
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 15px;
+  }
+
+  &:nth-child(even) {
+    transform: translateY(35px);
+  }
+
+  @media screen and (min-width: 1200px) {
+    &:nth-child(odd) {
+      transform: translateY(-17.5px);
+    }
+
+    &:nth-child(even) {
+      transform: translateY(17.5px);
+    }
+  }
 }
 
-.benefits-number {
+.benefits__number {
+  margin-bottom: 6px;
   font-weight: 700;
   font-size: 42px;
   line-height: 1.36;
   letter-spacing: 0.05em;
 }
 
-.benefits-item sup {
+.benefits__item sup {
   color: var(--accent-color);
 }

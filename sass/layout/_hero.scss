@@ -101,10 +101,11 @@
 
 .hero__socials-list {
   position: absolute;
-  bottom: 40px;
   left: 76px;
-  transform-origin: left;
-  transform: rotateZ(270deg) translateX(50%);
+  bottom: 40px;
+  transform-origin: top left;
+  transform: rotateZ(270deg);
+  background-color: #fff;
 
   @media screen and (min-width: 1200px) {
     left: 82px;
