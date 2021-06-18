@@ -11,7 +11,6 @@
   }
 
   @media screen and (min-width: 768px) and (max-width: 1279.98px) {
-    max-width: 768px;
     margin-right: auto;
     margin-left: auto;
     background-image: url(../images/contacts/tablet/img.png);
@@ -33,6 +32,22 @@
       (min-resolution: 2dppx) {
       background-image: url(../images/contacts/desktop/contact-bg@2x.png);
     }
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1279.98px) {
+  .contacts .section-conteiner {
+    display: flex;
+  }
+
+  .contacts__content-wrapper {
+    flex-basis: 50%;
+  }
+
+  .contacts__office-hours {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 }
 

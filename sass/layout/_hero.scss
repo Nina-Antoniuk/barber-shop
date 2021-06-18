@@ -1,6 +1,8 @@
 .hero {
-  display: flex;
-  justify-content: space-between;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .hero__content-bg {

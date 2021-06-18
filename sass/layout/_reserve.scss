@@ -1,12 +1,6 @@
 .reserve {
   max-width: 100%;
 
-  @media screen and (min-width: 768px) and (max-width: 1279.98px) {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 768px;
-  }
-
   @media screen and (min-width: 1280px) {
     flex-basis: calc((100% - 30px) / 2);
     display: flex;
