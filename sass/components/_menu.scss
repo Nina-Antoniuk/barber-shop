@@ -13,3 +13,26 @@
     }
   }
 }
+
+.backdrop {
+  @media screen and (max-width: 767.98px) {
+    transform: translateX(0);
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 100vh;
+    background-color: rgba(29, 28, 27, 0.76);
+    display: flex;
+    justify-content: flex-end;
+    transition: transform 200ms linear;
+  }
+
+  flex-basis: 83%;
+}
+
+.backdrop.is-hidden {
+  @media screen and (max-width: 767.98px) {
+    transform: translateX(100%);
+  }
+}

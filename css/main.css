@@ -201,6 +201,8 @@ address {
   padding: 0;
   border: 0;
   background-color: transparent;
+  position: relative;
+  z-index: 10;
 }
 
 @media screen and (min-width: 768px) {
@@ -227,6 +229,31 @@ address {
 @media screen and (min-width: 1280px) {
   .menu__item:not(:last-child) {
     margin-right: 40px;
+  }
+}
+
+.backdrop {
+  flex-basis: 83%;
+}
+
+@media screen and (max-width: 767.98px) {
+  .backdrop {
+    transform: translateX(0);
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 100vh;
+    background-color: rgba(29, 28, 27, 0.76);
+    display: flex;
+    justify-content: flex-end;
+    transition: transform 200ms linear;
+  }
+}
+
+@media screen and (max-width: 767.98px) {
+  .backdrop.is-hidden {
+    transform: translateX(100%);
   }
 }
 
@@ -268,6 +295,39 @@ address {
   height: 1px;
   margin-right: 40px;
   background-color: currentColor;
+}
+
+.socials-icon + .socials-icon {
+  margin-left: 10px;
+}
+
+.social-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+.socials-icons .icon {
+  width: 20px;
+  height: 20px;
+  fill: var(--title-color);
+}
+
+.social-link:hover .icon,
+.social-link:focus .icon {
+  fill: var(--accent-color);
+}
+
+.portfolio .title-lable {
+  margin-bottom: 44px;
+}
+
+.works-list {
+  --bloks: 4;
 }
 
 .section {
@@ -373,13 +433,14 @@ address {
 
 @media screen and (max-width: 767.98px) {
   .header-content {
-    display: none;
+    background-color: rgba(104, 226, 55, 0.555);
+    width: 300px;
+    height: 100vh;
   }
 }
 
 @media screen and (min-width: 768px) {
   .header-content {
-    flex-basis: 83%;
     display: flex;
     align-items: baseline;
     justify-content: space-around;
@@ -960,8 +1021,39 @@ address {
   margin-bottom: 0;
 }
 
+.contacts-address {
+  margin-bottom: 70px;
+}
+
+.contacts-item:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.contacts-link {
+  display: flex;
+  align-items: center;
+}
+
+.contacts-link .icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 16px;
+  fill: none;
+  stroke: var(--dark-bg-text-color);
+}
+
+.contacts-link:hover .icon,
+.contacts-link:focus .icon {
+  stroke: var(--accent-color);
+}
+
 .reserve {
   max-width: 100%;
+  border: 1px solid transparent;
+}
+
+.reserve:focus-within .section-title {
+  color: var(--accent-color);
 }
 
 @media screen and (min-width: 1280px) {
@@ -999,12 +1091,8 @@ address {
   position: absolute;
   top: 0;
   left: 0;
+  line-height: 1.2;
   transition: transform 200ms linear;
-}
-
-.form__field-wrapper:focus-within .form__field-label {
-  color: var(--accent-color);
-  transform: translateY(-30px);
 }
 
 .form__field {
@@ -1018,8 +1106,41 @@ address {
   color: #fff;
 }
 
+.form__field::placeholder {
+  color: transparent;
+  font-size: 14px;
+  transition: color 200ms linear 100ms;
+}
+
+.form__field:focus {
+  outline: none;
+  border-color: #fff;
+}
+
+.form__field:focus::placeholder {
+  color: var(--dark-bg-text-color);
+}
+
+.form__field:valid:not(:focus) {
+  color: #b7ff4b;
+}
+
+.form__field:invalid:not(:focus) {
+  color: #fa2d5a;
+}
+
+.form__field:focus + .form__field-label,
+.form__field:not(:placeholder-shown) + .form__field-label {
+  color: var(--accent-color);
+  transform: translateY(-30px);
+}
+
 .form__field--text {
   resize: none;
+}
+
+.form__field--text:valid:not(:focus) {
+  color: var(--light-text-color);
 }
 
 .form__button-wrapper {
@@ -1061,64 +1182,5 @@ address {
   .page-footer__socials-list {
     order: 2;
   }
-}
-
-.socials-icon + .socials-icon {
-  margin-left: 10px;
-}
-
-.social-link {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  background-color: #fff;
-}
-
-.socials-icons .icon {
-  width: 20px;
-  height: 20px;
-  fill: var(--title-color);
-}
-
-.social-link:hover .icon,
-.social-link:focus .icon {
-  fill: var(--accent-color);
-}
-
-.portfolio .title-lable {
-  margin-bottom: 44px;
-}
-
-.works-list {
-  --bloks: 4;
-}
-
-.contacts-address {
-  margin-bottom: 70px;
-}
-
-.contacts-item:not(:last-child) {
-  margin-bottom: 20px;
-}
-
-.contacts-link {
-  display: flex;
-  align-items: center;
-}
-
-.contacts-link .icon {
-  width: 24px;
-  height: 24px;
-  margin-right: 16px;
-  fill: none;
-  stroke: var(--dark-bg-text-color);
-}
-
-.contacts-link:hover .icon,
-.contacts-link:focus .icon {
-  stroke: var(--accent-color);
 }
 /*# sourceMappingURL=main.css.map */

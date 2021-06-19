@@ -54,3 +54,29 @@
 .contacts__office-hours p {
   margin-bottom: 0;
 }
+
+.contacts-address {
+  margin-bottom: 70px;
+}
+
+.contacts-item:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.contacts-link {
+  display: flex;
+  align-items: center;
+}
+
+.contacts-link .icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 16px;
+  fill: none;
+  stroke: var(--dark-bg-text-color);
+}
+
+.contacts-link:hover .icon,
+.contacts-link:focus .icon {
+  stroke: var(--accent-color);
+}

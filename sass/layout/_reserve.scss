@@ -1,5 +1,10 @@
 .reserve {
   max-width: 100%;
+  border: 1px solid transparent;
+
+  &:focus-within .section-title {
+    color: var(--accent-color);
+  }
 
   @media screen and (min-width: 1280px) {
     flex-basis: calc((100% - 30px) / 2);
@@ -33,12 +38,8 @@
   position: absolute;
   top: 0;
   left: 0;
+  line-height: 1.2;
   transition: transform 200ms linear;
-}
-
-.form__field-wrapper:focus-within .form__field-label {
-  color: var(--accent-color);
-  transform: translateY(-30px);
 }
 
 .form__field {
@@ -50,10 +51,43 @@
   border-right: none;
   border-bottom: 1px solid rgba(157, 164, 189, 0.4);
   color: #fff;
+
+  &::placeholder {
+    color: transparent;
+    font-size: 14px;
+    transition: color 200ms linear 100ms;
+  }
+
+  &:focus {
+    outline: none;
+    border-color: #fff;
+  }
+
+  &:focus::placeholder {
+    color: var(--dark-bg-text-color);
+  }
+
+  &:valid:not(:focus) {
+    color: rgb(183, 255, 75);
+  }
+
+  &:invalid:not(:focus) {
+    color: rgb(250, 45, 90);
+  }
+}
+
+.form__field:focus + .form__field-label,
+.form__field:not(:placeholder-shown) + .form__field-label {
+  color: var(--accent-color);
+  transform: translateY(-30px);
 }
 
 .form__field--text {
   resize: none;
+
+  &:valid:not(:focus) {
+    color: var(--light-text-color);
+  }
 }
 
 .form__button-wrapper {

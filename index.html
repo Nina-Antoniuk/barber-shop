@@ -21,27 +21,29 @@
         </svg>
       </a>
 
-      <button class="menu-button" type="button">
+      <button class="menu-button" type="button" data-open-menu>
         <svg class="menu-button__icon">
           <use href="./images/sprite.svg#icon-mobile-menu"></use>
         </svg>
       </button>
 
-      <div class="header-content">
-        <nav class="navigation">
-          <ul class="menu list">
-            <li class="menu__item"><a class="menu__link link" href="">О нас</a></li>
-            <li class="menu__item"><a class="menu__link link" href="">Услуги и цены</a></li>
-            <li class="menu__item"><a class="menu__link link" href="">Мастера</a></li>
-            <li class="menu__item"><a class="menu__link link" href="">Контакты</a></li>
+      <div class="backdrop is-hidden"  data-backdrop>
+        <div class="header-content">
+          <nav class="navigation">
+            <ul class="menu list">
+              <li class="menu__item"><a class="menu__link link" href="#about">О нас</a></li>
+              <li class="menu__item"><a class="menu__link link" href="#prices">Услуги и цены</a></li>
+              <li class="menu__item"><a class="menu__link link" href="#craftsmen">Мастера</a></li>
+              <li class="menu__item"><a class="menu__link link" href="#contacts">Контакты</a></li>
+            </ul>
+          </nav>
+        
+          <ul class="contacts-list list">
+            <li class="contacts-list__item"><a class="link" href="tel:+380441111111">+38 044 111 11 11</a></li>
+            <li class="contacts-list__item"><a class="contacts-btn btn link" href="#reserve">Онлайн запись</a></li>
           </ul>
-        </nav>
-          
-        <ul class="contacts-list list">
-          <li class="contacts-list__item"><a class="link" href="tel:+380441111111">+38 044 111 11 11</a></li>
-          <li class="contacts-list__item"><a class="contacts-btn btn link" href="#">Онлайн запись</a></li>
-        </ul>    
-       </div>
+        </div>
+      </div>
     </div>
   </header>
 
@@ -64,7 +66,7 @@
   </section>
 
   <!-- about section -->
-  <section class="about section">
+  <section class="about section" id="about">
     <div class="conteiner about__conteiner">
       <ul class="about__photos list">
         <li class="about__photos-item">
@@ -106,7 +108,7 @@
   </section>
 
   <!-- services and prices -->
-  <section class="prices dark-bg  section" >
+  <section class="prices dark-bg  section" id="prices">
     <div class="conteiner">
       <p class="title-lable line">Проведи время в компании лучших мастеров</p>
       <h2 class="section-title">Услуги и цены</h2>
@@ -125,7 +127,7 @@
         </ul>
       </div>
       <div class="btn-wrapp">
-        <a class="price__btn btn link" href="">Oнлайн-запись</a>
+        <a class="price__btn btn link" href="#reserve">Oнлайн-запись</a>
       </div>
     </div>
   </section>
@@ -164,7 +166,7 @@
   </section>
 
   <!-- our craftsmen section-->
-  <section class="craftsmen section" >
+  <section class="craftsmen section" id="craftsmen">
     <div class="conteiner">
       <p class="title-lable line">для настоящих ценителей атмосферы</p>
       <h2 class="section-title">Наши мастера</h2>
@@ -417,24 +419,24 @@
   <div class="dark-bg combined-sections">
 
       <!--reserve section -->
-      <section class="reserve section ">
+      <section class="reserve section" id="reserve">
         <div class="section-conteiner">
           <h2 class="section-title">Онлайн-запись</h2>
 
-          <form class="form form__reserve" action="">
+          <form class="form form__reserve"> <!--action="" metod=""-->
             <div class="form__field-wrapper">
+              <input class="form__field"  id="name" name="user-name" pattern="^[А-Яа-яЁё\s]+$" type="text" placeholder="Иван Иванов" autocomplete="off" required>
               <label class="form__field-label" for="name">Имя*</label>
-              <input class="form__field" type="text" id="name" autocomplete="off" required>
             </div>
 
             <div class="form__field-wrapper">
+              <input class="form__field" id="tel" name="user-tel" pattern="[0-9]{10}" type="tel" placeholder="0хх-ххх-хх-хх" autocomplete="off" required>
               <label class="form__field-label" for="tel">Телефон*</label>
-              <input class="form__field" type="tel" id="tel" name="" autocomplete="off" required>
             </div>
             
             <div class="form__field-wrapper form__field-wrapper--text">
+              <textarea class="form__field form__field--text" id="message" name="user-message" placeholder="Введите ваше сообщение" rows="5"></textarea>
               <label class="form__field-label" for="message">Cообщение</label>
-              <textarea class="form__field form__field--text" id="message" rows="5"></textarea>
             </div>
 
             <div class="form__button-wrapper">
@@ -445,7 +447,7 @@
       </section> 
       
       <!-- address section -->
-      <section class="contacts section ">
+      <section class="contacts section" id="contacts">
         <div class="section-conteiner">
           <div class="contacts__content-wrapper">
             <h2 class="section-title">Контакты</h2>
@@ -501,6 +503,12 @@
       <p>&#169; Copyright 2020</p>
     </div>
   </footer>
+
+  <!-- <div class="modal-window">
+    <button data-close-modal>Закрыть</button>
+  </div> -->
+
+  <script src="./index.js"></script>
 </body>
 </html>
 
