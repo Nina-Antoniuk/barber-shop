@@ -3,16 +3,26 @@
   padding: 0;
   border: 0;
   background-color: transparent;
-  position: relative;
-  z-index: 10;
 
   @media screen and (min-width: 768px) {
     display: none;
   }
+}
 
-  &__icon {
-    width: 40px;
-    height: 40px;
-    fill: var(--light-text-color);
+.menu-button__icon {
+  width: 40px;
+  height: 40px;
+  fill: var(--light-text-color);
+
+  .menu-button:hover &,
+  .menu-button:focus & {
+    fill: var(--accent-color);
   }
+}
+
+.menu-button__icon--close {
+  position: absolute;
+  top: 48px;
+  right: 30px;
+  fill: var(--title-color);
 }

@@ -1,18 +1,24 @@
 const refs = {
         openMenuBtn: document.querySelector("[data-open-menu]"),
-        closeModalBtn: document.querySelector("[data-close-modal]"),
+        closeMenuBtn: document.querySelector("[data-close-modal]"),
         backdrop: document.querySelector("[data-backdrop]"),
+        menuItems: document.querySelectorAll('.menu__link'),
+        contactButton: document.querySelector('.contacts-btn'),
       };
 
-      refs.openMenuBtn.addEventListener("click", toggleMenu);
-      // refs.closeModalBtn.addEventListener("click", toggleModal);
+refs.openMenuBtn.addEventListener("click", toggleMenu);
+refs.closeMenuBtn.addEventListener("click", toggleMenu);
+refs.contactButton.addEventListener('click', addClass);
 
-      refs.backdrop.addEventListener("click", logBackdropClick);
+for (item of refs.menuItems) {
+  item.addEventListener("click", addClass);
+} //map?
 
-      function toggleMenu() {
-        refs.backdrop.classList.toggle("is-hidden");
-      }
+function toggleMenu() {
+  refs.backdrop.classList.toggle("is-hidden");
+}
 
-      function logBackdropClick() {
-        console.log("Это клик в бекдроп");
-      }
+function addClass() {
+  console.log('here');
+  refs.backdrop.classList.add("is-hidden");
+}
