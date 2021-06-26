@@ -61,6 +61,7 @@ p {
 .link {
   text-decoration: none;
   color: inherit;
+  transition: color 250ms ease;
 }
 
 .link:hover,
@@ -225,6 +226,32 @@ address {
   top: 48px;
   right: 30px;
   fill: var(--title-color);
+}
+
+.menu__item {
+  position: relative;
+}
+
+.menu__link {
+  display: block;
+  padding: 5px;
+}
+
+.menu__item::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: var(--light-text-color);
+  transform: scaleX(0);
+  transition: transform 250ms ease;
+}
+
+.menu__item:hover::after {
+  transform: scaleX(1);
 }
 
 @media screen and (max-width: 767.98px) {
@@ -544,6 +571,12 @@ address {
   background-image: linear-gradient(rgba(25, 28, 38, 0.2), rgba(25, 28, 38, 0.2)), url(../images/hero/mobile/slider1.jpg);
 }
 
+@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .hero__content-bg {
+    background-image: linear-gradient(rgba(25, 28, 38, 0.2), rgba(25, 28, 38, 0.2)), url(../images/hero/mobile/slider1@2x.jpg);
+  }
+}
+
 @media screen and (min-width: 480px) {
   .hero__content-bg {
     padding-left: 31px;
@@ -557,11 +590,23 @@ address {
   }
 }
 
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .hero__content-bg {
+    background-image: linear-gradient(rgba(25, 28, 38, 0.2), rgba(25, 28, 38, 0.2)), url(../images/hero/tablet/slider1@2x.jpg);
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .hero__content-bg {
     flex-grow: calc((100% - 12) * 11 - 30px);
     padding-left: 100px;
     background-image: linear-gradient(rgba(25, 28, 38, 0.2), rgba(25, 28, 38, 0.2)), url(../images/hero/desktop/slider1.jpg);
+  }
+}
+
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+  .hero__content-bg {
+    background-image: linear-gradient(rgba(25, 28, 38, 0.2), rgba(25, 28, 38, 0.2)), url(../images/hero/desktop/slider1@2x.jpg);
   }
 }
 
