@@ -247,11 +247,13 @@ address {
   height: 2px;
   background-color: var(--light-text-color);
   transform: scaleX(0);
+  transform-origin: right;
   transition: transform 250ms ease;
 }
 
 .menu__item:hover::after {
   transform: scaleX(1);
+  transform-origin: left;
 }
 
 @media screen and (max-width: 767.98px) {
