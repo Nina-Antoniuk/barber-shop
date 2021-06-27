@@ -59,7 +59,7 @@
   }
 }
 
-.header-content {
+.page-header__content {
   @media screen and (max-width: 767.98px) {
     background-color: #fff;
     width: 300px;
@@ -122,4 +122,21 @@
 .contacts-btn {
   color: var(--light-text-color);
   display: inline-block;
+}
+
+.page-header__socials-list {
+  flex-wrap: wrap;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19px;
+  margin-top: 50px;
+
+  & .social-list__item:last-child {
+    margin-top: 24px;
+    margin-left: 45px;
+  }
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
 }

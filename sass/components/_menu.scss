@@ -28,7 +28,7 @@
   }
 
   @media screen and (max-width: 767.98px) {
-    margin-bottom: 64px;
+    margin-bottom: 50px;
 
     &__item {
       font-size: 18px;
@@ -37,7 +37,7 @@
     }
 
     &__item:not(:last-child) {
-      margin-bottom: 24px;
+      margin-bottom: 18px;
     }
   }
 
