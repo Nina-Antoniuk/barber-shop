@@ -287,19 +287,26 @@ address {
 
 .slider-wrapp {
   position: relative;
-  max-width: 1100px;
   order: 2;
 }
 
-.slider {
-  max-width: 1150px;
-  margin-left: auto;
-  margin-right: auto;
+@media screen and (min-width: 768px) {
+  .slider-wrapp {
+    min-width: 609px;
+    max-width: 1150px;
+    background-color: #ca3434;
+  }
 }
 
-.slider .slider-item {
-  height: 680px;
-  color: #fff;
+@media screen and (min-width: 1280px) {
+  .slider-wrapp {
+    max-width: 1120px;
+  }
+}
+
+.slider {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .slick-prev,
@@ -312,16 +319,49 @@ address {
   border-bottom: 1px solid #fff;
 }
 
+@media screen and (max-width: 767.98px) {
+  .slick-prev,
+  .slick-next {
+    border-bottom: transparent;
+  }
+}
+
 .slick-next {
-  top: 616px;
-  right: 80px;
+  top: 520px;
+  right: 25px;
+}
+
+@media screen and (min-width: 768px) {
+  .slick-next {
+    top: 616px;
+    right: 30px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .slick-next {
+    right: 80px;
+  }
 }
 
 .slick-prev {
-  left: 870px;
-  top: 616px;
+  top: 520px;
+  left: 200px;
   z-index: 10;
   text-align: left;
+}
+
+@media screen and (min-width: 768px) {
+  .slick-prev {
+    top: 616px;
+    left: 424px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .slick-prev {
+    left: 840px;
+  }
 }
 
 .slick-next::before,
@@ -332,12 +372,20 @@ address {
   line-height: 15px;
 }
 
+@media screen and (max-width: 767.98px) {
+  .slick-next::before,
+  .slick-prev::before {
+    color: transparent;
+  }
+}
+
 .slick-dots {
-  right: 0;
+  right: 25px;
   bottom: 50%;
   flex-direction: column;
   display: flex;
   align-items: flex-end;
+  width: 1000px;
 }
 
 .slick-dots li button::before {
@@ -355,7 +403,19 @@ address {
 }
 
 .slider-img {
-  height: 680px;
+  max-width: 100%;
+}
+
+@media screen and (max-width: 767.98px) {
+  .slider-img {
+    height: 580px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .slider-img {
+    height: 680px;
+  }
 }
 
 .title-lable {
@@ -651,12 +711,21 @@ address {
 .hero {
   position: relative;
   max-width: 100vw;
+  background-color: #e45e5e;
 }
 
 @media screen and (min-width: 768px) {
   .hero {
     display: flex;
     justify-content: space-between;
+    background-color: #a3f50b;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .hero {
+    max-width: 100vw;
+    background-color: #4f28fd;
   }
 }
 
@@ -690,7 +759,7 @@ address {
 .hero__content {
   position: absolute;
   top: 50%;
-  left: 100px;
+  left: 31px;
   transform: translateY(-50%);
   max-width: 280px;
   font-size: 16px;
@@ -707,6 +776,7 @@ address {
 
 @media screen and (min-width: 768px) {
   .hero__content {
+    left: 120px;
     width: calc(100% / 6 * 3);
     max-width: 355px;
   }
@@ -714,6 +784,7 @@ address {
 
 @media screen and (min-width: 1200px) {
   .hero__content {
+    left: 100px;
     max-width: calc((100% / 11) * 5);
     max-width: 500px;
   }
