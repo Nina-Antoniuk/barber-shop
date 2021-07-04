@@ -178,6 +178,12 @@ address {
   }
 }
 
+@media screen and (min-width: 1200px) and (max-width: 1279.98px) {
+  .logo {
+    margin-left: 40px;
+  }
+}
+
 @media screen and (min-width: 1280px) {
   .logo {
     flex-basis: calc(100% / 12);
@@ -334,7 +340,7 @@ address {
 @media screen and (min-width: 768px) {
   .slick-next {
     top: 616px;
-    right: 30px;
+    right: 5%;
   }
 }
 
@@ -354,7 +360,7 @@ address {
 @media screen and (min-width: 768px) {
   .slick-prev {
     top: 616px;
-    left: 424px;
+    left: 73%;
   }
 }
 
@@ -711,21 +717,18 @@ address {
 .hero {
   position: relative;
   max-width: 100vw;
-  background-color: #e45e5e;
 }
 
 @media screen and (min-width: 768px) {
   .hero {
     display: flex;
     justify-content: space-between;
-    background-color: #a3f50b;
   }
 }
 
 @media screen and (min-width: 1280px) {
   .hero {
     max-width: 100vw;
-    background-color: #4f28fd;
   }
 }
 

@@ -1,20 +1,14 @@
 .hero {
   position: relative;
   max-width: 100vw;
-  background-color: rgb(228, 94, 94);
 
   @media screen and (min-width: 768px) {
     display: flex;
     justify-content: space-between;
-    // max-width: 729px;
-    // margin-left: auto;
-    // margin-right: auto;
-    background-color: rgb(163, 245, 11);
   }
 
   @media screen and (min-width: 1280px) {
     max-width: 100vw;
-    background-color: rgb(79, 40, 253);
   }
 
   @media screen and (min-width: 1355px) {
